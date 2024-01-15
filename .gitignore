@@ -1,6 +1,6 @@
 .vs/
-.storedate.client/node_modules
-.storedate.client/.vscode
-.storedate.client/obj
-.storedate.server/bin
-.storedate.server/obj
+storedate.client/node_modules
+storedate.client/.vscode
+storedate.client/obj
+storedate.server/bin
+storedate.server/obj

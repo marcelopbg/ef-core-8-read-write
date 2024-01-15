@@ -3,7 +3,7 @@ import { postData } from './utils/utils'
 import './App.css';
 
 interface DateWrapper {
-    date: Date
+    date: string
     id: number
 }
 
@@ -18,7 +18,7 @@ function App() {
     const fetchLastDate = async () => {
         const response = await fetch('Date');
         const result = await response.json() as DateWrapper;
-        setDate(result.date);
+        setDate(new Date(result.date));
     }
 
     const postDate = async () => {
@@ -31,7 +31,7 @@ function App() {
             <h1 id="tabelLabel"> Dates </h1>
             <button onClick={() => postDate()}> Click me </button>
             {date && (
-                <p> {new Date(date).toLocaleString('en-US')} </p>
+                <p> {date.toLocaleString('en-US')} </p>
             )}
         </div>
     );
